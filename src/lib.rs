@@ -76,60 +76,115 @@ impl ASensorEvent {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn vector(&mut self) -> *mut ASensorVector {
+    pub unsafe fn mut_vector(&mut self) -> *mut ASensorVector {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn acceleration(&mut self) -> *mut ASensorVector {
+    pub unsafe fn vector(&self) -> *const ASensorVector {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_acceleration(&mut self) -> *mut ASensorVector {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn magnetic(&mut self) -> *mut ASensorVector {
+    pub unsafe fn acceleration(&self) -> *const ASensorVector {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_magnetic(&mut self) -> *mut ASensorVector {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn temperature(&mut self) -> *mut c_float {
+    pub unsafe fn magnetic(&self) -> *const ASensorVector {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_temperature(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn distance(&mut self) -> *mut c_float {
+    pub unsafe fn temperature(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_distance(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn light(&mut self) -> *mut c_float {
+    pub unsafe fn distance(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_light(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn pressure(&mut self) -> *mut c_float {
+    pub unsafe fn light(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_pressure(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn relative_humidity(&mut self) -> *mut c_float {
+    pub unsafe fn pressure(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_relative_humidity(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn uncalibrated_gyro(&mut self) -> *mut AUncalibratedEvent {
+    pub unsafe fn relative_humidity(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_uncalibrated_gyro(&mut self) -> *mut AUncalibratedEvent {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn uncalibrated_magnetic(&mut self) -> *mut AUncalibratedEvent {
+    pub unsafe fn uncalibrated_gyro(&self) -> *const AUncalibratedEvent {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_uncalibrated_magnetic(&mut self) -> *mut AUncalibratedEvent {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn meta_data(&mut self) -> *mut AMetaDataEvent {
+    pub unsafe fn uncalibrated_magnetic(&self) -> *const AUncalibratedEvent {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_meta_data(&mut self) -> *mut AMetaDataEvent {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn heart_rate(&mut self) -> *mut AHeartRateEvent {
+    pub unsafe fn meta_data(&self) -> *const AMetaDataEvent {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_heart_rate(&mut self) -> *mut AHeartRateEvent {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn heart_rate(&self) -> *const AHeartRateEvent {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
 
-    unsafe fn data_u64(&mut self) -> *mut ASensorEvent_u64 {
+    unsafe fn mut_data_u64(&mut self) -> *mut ASensorEvent_u64 {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn step_counter(&mut self) -> *mut u64 {
+    unsafe fn data_u64(&self) -> *const ASensorEvent_u64 {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn mut_step_counter(&mut self) -> *mut u64 {
+        (*self.mut_data_u64()).mut_step_counter()
+    }
+    pub unsafe fn step_counter(&self) -> *const u64 {
         (*self.data_u64()).step_counter()
     }
 }
@@ -154,8 +209,12 @@ impl ASensorEvent_u64 {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn step_counter(&mut self) -> *mut u64 {
+    pub unsafe fn mut_step_counter(&mut self) -> *mut u64 {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn step_counter(&self) -> *const u64 {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_);
         mem::transmute(raw.offset(0))
     }
 }
