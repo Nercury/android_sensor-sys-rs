@@ -348,10 +348,10 @@ extern "C" {
                                         list: *mut ASensorList)
                                         -> c_int;
     pub fn ASensorManager_getDefaultSensor(manager: *mut ASensorManager,
-                                           seonsor_type: SensorType)
+                                           seonsor_type: c_int)
                                            -> *const ASensor;
     pub fn ASensorManager_getDefaultSensorEx(manager: *mut ASensorManager,
-                                             _type: c_int,
+                                             sensor_type: c_int,
                                              wakeUp: u8)
                                              -> *const ASensor;
     pub fn ASensorManager_createEventQueue(manager: *mut ASensorManager,
