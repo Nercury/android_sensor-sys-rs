@@ -259,31 +259,60 @@ pub struct ASensorVector {
 }
 
 impl ASensorVector {
-    pub unsafe fn v(&mut self) -> *mut [c_float; 3usize] {
+    pub unsafe fn v(&self) -> *const [c_float; 3usize] {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn x(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn y(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(4))
+    }
+    pub unsafe fn z(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(8))
+    }
+    pub unsafe fn azimuth(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(0))
+    }
+    pub unsafe fn pitch(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(4))
+    }
+    pub unsafe fn roll(&self) -> *const c_float {
+        let raw: *const u8 = mem::transmute(&self._bindgen_data_1_);
+        mem::transmute(raw.offset(8))
+    }
+
+    pub unsafe fn mut_v(&mut self) -> *mut [c_float; 3usize] {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn x(&mut self) -> *mut c_float {
+    pub unsafe fn mut_x(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn y(&mut self) -> *mut c_float {
+    pub unsafe fn mut_y(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(4))
     }
-    pub unsafe fn z(&mut self) -> *mut c_float {
+    pub unsafe fn mut_z(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(8))
     }
-    pub unsafe fn azimuth(&mut self) -> *mut c_float {
+    pub unsafe fn mut_azimuth(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(0))
     }
-    pub unsafe fn pitch(&mut self) -> *mut c_float {
+    pub unsafe fn mut_pitch(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(4))
     }
-    pub unsafe fn roll(&mut self) -> *mut c_float {
+    pub unsafe fn mut_roll(&mut self) -> *mut c_float {
         let raw: *mut u8 = mem::transmute(&self._bindgen_data_1_);
         mem::transmute(raw.offset(8))
     }
