@@ -1,6 +1,6 @@
 [package]
 name = "android_sensor-sys"
-version = "0.1.3"
+version = "0.1.4"
 authors = [
     "The android_sensor_sys Developers",
 ]
@@ -10,6 +10,8 @@ repository = "https://github.com/nercury/android_sensor-sys-rs"
 description = """
 Bindings to Android Sensor Library.
 """
+keywords = ["ffi", "android", "sensor"]
+categories = ["external-ffi-bindings"]
 
 [dependencies.android_looper-sys]
 version = "0.1"
